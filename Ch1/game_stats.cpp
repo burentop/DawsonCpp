@@ -5,35 +5,18 @@ using namespace std;
 
 int main()
 {
-    unsigned int score = 5000;
+    const int ALIEN_POINTS = 150;
+    int aliensKilled = 10;
+    int score = aliensKilled * ALIEN_POINTS;
     cout << "score: " << score << endl;
 
-    score = score + 100;
-    cout << "score: " << score << endl;
+    enum difficulty {NOVICE, EASY, NORMAL, HARD, UNBEATABLE};
+    difficulty myDifficulty = EASY;
 
-    score += 100;
-    cout << "score: " << score << endl;
-
-    int lives = 3;
-    ++lives;
-    cout << "lives: " << lives << endl;
-
-    lives = 3;
-    lives++;
-    cout << "lives: " << lives << endl;
-
-    lives = 3;
-    int bonus = ++lives * 10;
-    cout << "lives, bonus = " << lives << ", " << bonus << endl;
-
-    lives = 3;
-    bonus = lives++ * 10;
-    cout << "lives, bonus = " << lives << ", " << bonus << endl;
-
-    score = 4294967295;
-    cout << "\nscore: " << score << endl;
-    ++score;
-    cout << "score: " << score << endl;
+    enum shipCost {FIGHTER_COST = 25, BOMBER_COST, CRUISER_COST = 50};
+    shipCost myShipCost = BOMBER_COST;
+    cout << "\nTo upgrade my ship to a Cruiser will cost "
+         << (CRUISER_COST - myShipCost) << " Resource Points.\n";
 
     return 0;
 }
