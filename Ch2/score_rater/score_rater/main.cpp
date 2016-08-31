@@ -18,9 +18,17 @@ int main() {
     {
         cout << "You score 1000 or more. Impressive!\n";
     }
+    else if (score >= 500)
+    {
+        cout << "You scored 500 or more. Nice.\n";
+    }
+    else if (score >= 250)
+    {
+        cout << "You score 250 or more. Decent.\n";
+    }
     else
     {
-        cout << "You score less than 1000.\n";
+        cout << "You score less than 250. Nothing to brag about.\n";
     }
     
     return 0;
