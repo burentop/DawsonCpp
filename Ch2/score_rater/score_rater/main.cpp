@@ -10,35 +10,17 @@
 using namespace std;
 
 int main() {
-    if (true)
+    int score;
+    cout << "Enter your score: ";
+    cin >> score;
+    
+    if (score >= 1000)
     {
-        cout << "This is always dispayed.\n\n";
+        cout << "You score 1000 or more. Impressive!\n";
     }
-    
-    if (false)
+    else
     {
-        cout << "This is never displayed.\n\n";
-    }
-    
-    int score = 1000;
-    
-    if (score)
-    {
-        cout << "At least you didn't score zero.\n\n";
-    }
-    
-    if (score >= 250)
-    {
-        cout << "You score 250 or more. Decent.\n\n";
-    }
-    
-    if (score >= 500)
-    {
-        cout << "You scored 500 or more. Nice.\n\n";
-        if (score >= 1000)
-        {
-            cout << "You scored 1000 or more. Impressive!\n";
-        }
+        cout << "You score less than 1000.\n";
     }
     
     return 0;
