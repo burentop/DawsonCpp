@@ -15,19 +15,21 @@ int main() {
     cout << "2 - Normal\n";
     cout << "3 - Hard\n\n";
     
+    enum difficulty {SKIP, EASY, NORMAL, HARD};
+    
     int choice;
     cout << "Choice: ";
     cin >> choice;
     
     switch (choice)
     {
-        case 1:
+        case EASY:
             cout << "You picked Easy.\n";
             break;
-        case 2:
+        case NORMAL:
             cout << "You picked Normal.\n";
             break;
-        case 3:
+        case HARD:
             cout << "You picked Hard.\n";
             break;
         default:
