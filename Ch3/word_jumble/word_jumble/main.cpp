@@ -30,6 +30,7 @@ int main() {
     int choice = (rand() % NUM_WORDS);
     string theWord = WORDS[choice][WORD]; // word to guess
     string theHint = WORDS[choice][HINT]; // hint for word
+    int score = theWord.length();
     
     string jumble = theWord; // jumbled version of word
     int length = jumble.size();
@@ -56,6 +57,7 @@ int main() {
     {
         if (guess == "hint")
         {
+	    score--;
             cout << theHint;
         }
         else{
@@ -69,6 +71,7 @@ int main() {
     if (guess == theWord)
     {
         cout << "\nThat's it! You guessed it!\n";
+	cout << "Your score is " << score << endl;
     }
     
     cout << "\nThanks for playing.\n";
